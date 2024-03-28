@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login page
+{% endblock %}
+
+{% block content %}
+    <h1>Log in to system</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+        
+        <a href="{% url 'password_reset' %} ">Unutdingizmi</a>
+    
+        <input type="submit" value="Log" class="btn btn-sccess">
+    </form>
+    
+    
+{% endblock %}
+
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>#}
+{#        {% block title %}#}
+{#        	Django auth#}
+{#        {% endblock %}#}
+{#    </title>#}
+{#</head>#}
+{#<body>#}
+{##}
+{#        {% block content %}#}
+{#        #}
+{#        {% endblock %}#}
+{#    <h2>User Registration</h2>#}
+{#    <form method="post">#}
+{#        {% csrf_token %}#}
+{#        {{ form.as_p }}#}
+{#        <button type="submit">Register</button>#}
+{#    </form>#}
+{#</body>#}
+{#</html>#}
